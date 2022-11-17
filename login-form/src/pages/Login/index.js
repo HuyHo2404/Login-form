@@ -58,11 +58,11 @@ export default function Login() {
                             <button type="submit">Login</button>
                         </div>
                         <div className={cx('social-btn')}>
-                            <div className={cx('login-btn social-btn-item facebook-btn')}>
-                                <button type="submit">Login</button>
+                            <div className={cx('login-btn social-btn-item')}>
+                                <button className={cx('facebook-btn')} type="submit">Facebook</button>
                             </div>
-                            <div className={cx('login-btn social-btn-item google-btn')}>
-                                <button type="submit">Login</button>
+                            <div className={cx('login-btn social-btn-item')}>
+                                <button className={cx('google-btn')} type="submit">Google</button>
                             </div>
                         </div>
                     </Form>
