@@ -22,19 +22,15 @@ axiosClient.interceptors.request.use(
     },
 );
 
-axiosClient.interceptors.response.use(
-    (response) => {
-        if(response && response.data) {
-            const token = response.data?.data.accessToken
-            if(token) {
-                TokenService.SetAccessToken(token)
-            }
+axiosClient.interceptors.response.use((response) => {
+    console.log('axios-client::', response);
+    if (response && response.data) {
+        const token = response.data?.access_token;
+        if (token) {
+            TokenService.SetAccessToken(token);
         }
     }
-, async error => {
-    const originalConfig = error.config
+    return response.data;
+});
 
-    if(originalConfig.url !== "/api/register" && error.response) {
-        if(error.response.status === 401 && )
-    }
-})
+export default axiosClient;

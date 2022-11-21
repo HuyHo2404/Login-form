@@ -99,6 +99,50 @@
             cursor: pointer;
         }
     }
+    .facebook-btn {
+        height: 55px;
+        background: var(--blue-color);
+        color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 140px;
+        border-radius: 5px;
+        font-weight: 700;
+        &:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+    .google-btn {
+        height: 55px;
+        background: var(--red-color);
+        color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 140px;
+        border-radius: 5px;
+        font-weight: 700;
+        &:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .social-btn {
+        display: block;
+
+        .facebook-btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .google-btn {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 385px) {
